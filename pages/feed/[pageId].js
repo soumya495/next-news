@@ -1,4 +1,5 @@
 import styles from '../../styles/Feed.module.css'
+import Paginator from '../../components/paginator'
 
 export const Feed = ({ pageNumber, articles }) => {
   console.log(pageNumber, articles)
@@ -15,6 +16,7 @@ export const Feed = ({ pageNumber, articles }) => {
           </div>
         ))}
       </div>
+      <Paginator pageNumber={pageNumber} />
     </div>
   )
 }
