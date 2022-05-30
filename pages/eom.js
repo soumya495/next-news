@@ -41,9 +41,10 @@ export const eom = ({ employee }) => {
 }
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(
+  const url =
     'https://my-json-server.typicode.com/soumya495/my-JSON-server/employeeOfTheMonth'
-  )
+
+  const res = await fetch(url)
   const employee = await res.json()
   return {
     props: {
